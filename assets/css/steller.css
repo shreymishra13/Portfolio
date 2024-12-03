@@ -496,9 +496,9 @@ mark,
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: #fff;
-  border: 1px solid #dee2e6;
-  border-radius: 0.25rem;
+  /* background-color: #fff; */
+  /* border: 1px solid #dee2e6; */
+  /* border-radius: 0.25rem; */
   max-width: 100%;
   height: auto;
 }
@@ -11172,6 +11172,7 @@ pre {
   border-radius: 0.25rem;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  height: 12rem;
 }
 
 .custom-card .card-body {
@@ -11651,9 +11652,31 @@ pre {
   background: white;
 }
 
+.my-card {
+  transition: box-shadow 0.3s; /* Smooth transitions for background and color */
+}
 
+.project-card {
+  border: 2px solid rgb(247, 218, 160); 
+  padding: 10px;
+}
 /* My css  */
 .my-card:hover{
-background-color: var(--primary);
-color: var(--white);
+/* background-color: var(--primary);
+color: var(--white); */
+animation: card-animation 0.3s forwards;
+/* transform: scale(110%); */
+}
+
+@keyframes card-animation{
+  0%{
+    box-shadow: 1px 1px 5px var(--primary);
+    
+    
+  }
+
+  100%{
+    box-shadow: 5px 5px 5px var(--primary);
+  
+  }
 }
